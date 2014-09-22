@@ -1,0 +1,39 @@
+Inputs a / b 
+
+a = 11
+b = 5 
+
+a/b = 2 
+
+a % b = 1
+
+//===
+
+a 			counter			
+11 			0			Make sure 11 is > 5
+- 5
+____
+6			1			Make sure 6 is > 5
+-5
+____
+1 = Mod			2 = division			Is not > 
+
+
+Flag as an input that will swap registers
+
+set     r0 = 0 
+	r1 = big number
+	r2 = small number
+
+compare r1 r2
+	case greater
+	case lass then
+
+greater
+	subtract
+	push to r0 & r1
+	start over
+
+less than
+	r2
+	push to r0 ?
