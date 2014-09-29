@@ -1,0 +1,9 @@
+3 branching constructs
+	if, else if, switch
+
+3 loops
+	for, do, while
+
+
+6 programs, 1 for each.
+	
