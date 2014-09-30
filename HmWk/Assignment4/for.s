@@ -13,7 +13,7 @@ main:
 	cmp r1, r2
 	ble _forloop
 	b end
-_forloop: /* For r1 > r2, add 1 to r1, r3++  */
+_forloop: /* For r1 < r2, add 1 to r1, r3++  */
 	add r1, r1, #1
 	add r3, r3, #1
 	cmp r1, r2
