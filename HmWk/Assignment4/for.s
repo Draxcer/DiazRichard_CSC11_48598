@@ -19,6 +19,6 @@ _forloop: /* For r1 < r2, add 1 to r1, r3++  */
 	cmp r1, r2
 	ble _forloop
 end:
-	mov r3, r0
+	mov r0, r3
 	bx lr
 
