@@ -9,8 +9,6 @@
 main:
 	mov r1, #1 
 	mov r2, #3
-	
-	b end
 _while: /* For r1 <= r2, add 1 to r1*/
 	cmp r1, r2
 	beq end
