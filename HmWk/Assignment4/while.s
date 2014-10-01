@@ -9,14 +9,13 @@
 main:
 	mov r1, #1 
 	mov r2, #3
-	mov r3, #0 /* counter */
-	cmp r1, r2
-	ble _while
+	
 	b end
 _while: /* For r1 <= r2, add 1 to r1*/
-	add r1, r1, #1
 	cmp r1, r2
-	ble _while
+	beq end
+	add r1, r1, #1
+	b _while
 end:
 	mov r0, r1
 	bx lr
