@@ -10,8 +10,6 @@ main:
 	mov r1, #1 
 	mov r2, #3
 	mov r3, #0 /* counter */
-	
-	b end
 _forloop: /* For r1 < r2, add 1 to r1, r3++  */
 	cmp r1, r2
 	beq end
