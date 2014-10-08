@@ -3,7 +3,7 @@
  
 /* First message */
 .balign 4
-message1: .asciz "Hey, type a number: "
+firstNumber: .asciz "Hey, type a number: "
  
 /* Second message */
 .balign 4
@@ -27,7 +27,7 @@ main:
     ldr r1, address_of_return        /* r1 ? &address_of_return */
     str lr, [r1]                     /* *r1 ? lr */
  
-    ldr r0, address_of_message1      /* r0 ? &message1 */
+    ldr r0, address_of_firstNumber      /* r0 ? &firstNumber */
     bl printf                        /* call to printf */
  
     ldr r0, address_of_scan_pattern  /* r0 ? &scan_pattern */
@@ -45,7 +45,7 @@ main:
     ldr lr, address_of_return        /* lr ? &address_of_return */
     ldr lr, [lr]                     /* lr ? *lr */
     bx lr                            /* return from main using lr */
-address_of_message1 : .word message1
+address_of_firstNumber : .word firstNumber
 address_of_message2 : .word message2
 address_of_scan_pattern : .word scan_pattern
 address_of_number_read : .word number_read
