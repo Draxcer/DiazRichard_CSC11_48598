@@ -9,7 +9,7 @@ main:
 	movls r2,r2,lsl#1
 	movls r3,r3,lsl#1
 	bls main
-	
+
 next:
 	cmp r1,r2
 	subcs r1,r1,r2
@@ -17,6 +17,6 @@ next:
 	movs r3,r3,lsr#1
 	movcc r2,r2,lsr#1
 	bcc next
-	
+
 divide_end:
 	bx lr

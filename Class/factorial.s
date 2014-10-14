@@ -20,11 +20,12 @@ is_nonzero:
  /* After the call r0 contains factorial(n-1) */
  /* Load r0 (that we kept in th stack) into r1 */
  ldr r1, [sp] /* r1 ? *sp */
- mul r0, r0, r1 /* r0 ? r0 * r1 */
+ mul r0, r1, r0 /* r0 ? r0 * r1 */
 end:
  add sp, sp, #+4 /* Discard the r0 we kept in the stack */
  ldr lr, [sp], #+4 /* Pop the top of the stack and put it in lr */
  bx lr /* Leave factorial */
+
 .globl main
 main:
  str lr, [sp,#-4]! /* Push lr onto the top of the stack */
@@ -47,7 +48,7 @@ main:
  /* So we set it as the second parameter of printf */
  ldr r0, address_of_message2 /* Set &message2 as the first parameter of printf */
  bl printf /* Call printf */
- 
+
  add sp, sp, #+4 /* Discard the integer read by scanf */
  ldr lr, [sp], #+4 /* Pop the top of the stack and put it in lr */
  bx lr /* Leave main */
