@@ -57,7 +57,19 @@ int select(int r1) {
 }
 
 void payCheck() {
-    
+    int hours;
+	int pay = 8;
+	int dtStart = 40;
+	int ttStart = 50;
+	int dovt;
+	int tovt;
+	int check;
+	cout << "How many hours did you work?\n";
+	cin >> hours;
+	if(hours > 40 && hours <= 50) {
+		dtStart - hours = dovt;
+		
+	}
 }
 
 void packages() {
